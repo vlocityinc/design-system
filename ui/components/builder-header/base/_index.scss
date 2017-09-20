@@ -13,7 +13,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
+  #{$left}: 0;
   z-index: $z-index-sticky;
 }
 
@@ -42,7 +42,7 @@
   white-space: nowrap;
 
   + .slds-builder-header__item {
-    border-left: $border-width-thin solid currentColor;
+    border-#{$left}: $border-width-thin solid currentColor;
   }
 }
 
@@ -109,7 +109,7 @@
  * @restrict .slds-builder-header div
  */
 .slds-builder-header__utilities {
-  margin-left: auto;
+  margin-#{$left}: auto;
 }
 
 /**
@@ -125,7 +125,7 @@
 
   + .slds-builder-header__nav-item,
   + .slds-builder-header__utilities-item {
-    border-left: $border-width-thin solid currentColor;
+    border-#{$left}: $border-width-thin solid currentColor;
   }
 }
 
@@ -147,7 +147,7 @@
  * @restrict .slds-builder-toolbar div
  */
 .slds-builder-toolbar__actions {
-  margin-left: auto;
+  margin-#{$left}: auto;
 }
 
 /**
@@ -156,5 +156,5 @@
  * @restrict .slds-builder-toolbar div
  */
 .slds-builder-toolbar__item-group + .slds-builder-toolbar__item-group {
-  margin-left: $spacing-xx-small;
+  margin-#{$left}: $spacing-xx-small;
 }

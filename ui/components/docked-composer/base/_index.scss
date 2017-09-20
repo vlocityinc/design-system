@@ -14,7 +14,7 @@
   align-items: flex-end;
   position: fixed;
   bottom: 0;
-  right: 0;
+  #{$right}: 0;
   padding: 0 $spacing-large;
   height: $height-docked-bar;
 }
@@ -28,10 +28,10 @@
  */
 .slds-docked-composer {
   position: relative;
-  border-radius: $border-radius-medium $border-radius-medium 0 0;
+  border-radius: corner-values($border-radius-medium $border-radius-medium 0 0);
   width: 480px;
   height: $height-docked-bar;
-  float: left;
+  float: $left;
   box-shadow: $elevation-inverse-shadow-2;
   border: $border-width-thin solid $color-border {
     bottom: none;
@@ -74,7 +74,7 @@
   }
 
   + .slds-docked-composer {
-    margin-left: $spacing-large;
+    margin-#{$left}: $spacing-large;
   }
 
   /**
@@ -87,12 +87,12 @@
   &__header {
     background: $color-background-docked-panel-header;
     border-bottom: $border-width-thick solid $brand-primary;
-    border-radius: $border-radius-medium $border-radius-medium 0 0;
+    border-radius: corner-values($border-radius-medium $border-radius-medium 0 0);
     padding: $spacing-x-small $spacing-small;
   }
 
   &__actions .slds-button {
-    margin-left: $spacing-small;
+    margin-#{$left}: $spacing-small;
   }
 
   /**

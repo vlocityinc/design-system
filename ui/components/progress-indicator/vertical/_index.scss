@@ -25,7 +25,7 @@
     &:after {
       content: '';
       position: absolute;
-      left: 7px;
+      #{$left}: 7px;
       width: 2px;
       background-color: $progress-bar-color-background;
     }
@@ -77,18 +77,18 @@
   }
 
   .slds-progress__marker {
-    margin-right: $spacing-medium;
+    margin-#{$right}: $spacing-medium;
     min-width: $square-icon-utility-small;
     z-index: 5;
   }
 
   .slds-progress__marker_icon {
-    border-right: 0;
-    border-left: 0;
+    border-#{$right}: 0;
+    border-#{$left}: 0;
   }
 
   .slds-progress__item.slds-is-completed .slds-progress__marker_icon {
-    margin-left: 1px;
+    margin-#{$left}: 1px;
 
     svg {
       fill: $progress-bar-color-background-fill;
@@ -109,7 +109,7 @@
   }
 
   .slds-progress__item.slds-has-error .slds-progress__marker_icon {
-    margin-left: 1px;
+    margin-#{$left}: 1px;
 
     svg {
       fill: $color-text-error;

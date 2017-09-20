@@ -26,9 +26,9 @@
   align-items: flex-start;
   white-space: nowrap;
   position: relative;
-  padding: $spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small;
-  border-top-left-radius: $border-radius-medium;
-  border-top-right-radius: $border-radius-medium;
+  padding: side-values($spacing-x-small $spacing-x-small $spacing-xx-small $spacing-x-small);
+  border-top-#{$left}-radius: $border-radius-medium;
+  border-top-#{$right}-radius: $border-radius-medium;
   border-bottom: $border-width-thin solid $color-border;
   background-color: $color-background;
 }
@@ -40,19 +40,19 @@
  * @restrict .slds-rich-text-editor__toolbar
  */
 .slds-rich-text-editor__toolbar_bottom {
-  border-radius: 0 0 $border-radius-medium $border-radius-medium;
+  border-radius: corner-values(0 0 $border-radius-medium $border-radius-medium);
   border-top: $border-width-thin solid $color-border;
   border-bottom: 0;
 }
 
 // Overrides for button-group-lists so that wrapping doesn't leave an unsightly margin on the left
 .slds-rich-text-editor .slds-button-group-list {
-  margin-right: $spacing-xx-small;
+  margin-#{$right}: $spacing-xx-small;
   margin-bottom: $spacing-xx-small;
-  margin-left: 0;
+  margin-#{$left}: 0;
 
   &:last-child {
-    margin-right: 0;
+    margin-#{$right}: 0;
   }
 }
 
@@ -63,7 +63,7 @@
  * @restrict .slds-rich-text-editor__toolbar div
  */
 .slds-rich-text-editor__select {
-  margin-right: $spacing-xx-small;
+  margin-#{$right}: $spacing-xx-small;
   margin-bottom: $spacing-xx-small;
 }
 
@@ -193,7 +193,7 @@
   ul {
     margin: 0;
     padding: 0;
-    padding-left: 1.5em;
+    padding-#{$left}: 1.5em;
   }
 
   ol > li {
@@ -270,8 +270,8 @@
 
     &:before {
       display: inline-block;
-      margin-right: 0.3em;
-      text-align: right;
+      margin-#{$right}: 0.3em;
+      text-align: $right;
       white-space: nowrap;
       width: 1.2em;
     }
@@ -279,14 +279,14 @@
     &:not(.ql-direction-rtl) {
 
       &:before {
-        margin-left: -1.5em;
+        margin-#{$left}: -1.5em;
       }
     }
   }
 
   ol li,
   ul li {
-    padding-left: 1.5em;
+    padding-#{$left}: 1.5em;
   }
 
   ol li {
@@ -402,75 +402,75 @@
   }
 
   li.ql-indent-1:not(.ql-direction-rtl) {
-    padding-left: 4.5em;
+    padding-#{$left}: 4.5em;
   }
 
   li.ql-indent-1.ql-direction-rtl.ql-align-right {
-    padding-right: 4.5em;
+    padding-#{$right}: 4.5em;
   }
 
   li.ql-indent-2:not(.ql-direction-rtl) {
-    padding-left: 7.5em;
+    padding-#{$left}: 7.5em;
   }
 
   li.ql-indent-2.ql-direction-rtl.ql-align-right {
-    padding-right: 7.5em;
+    padding-#{$right}: 7.5em;
   }
 
   li.ql-indent-3:not(.ql-direction-rtl) {
-    padding-left: 10.5em;
+    padding-#{$left}: 10.5em;
   }
 
   li.ql-indent-3.ql-direction-rtl.ql-align-right {
-    padding-right: 10.5em;
+    padding-#{$right}: 10.5em;
   }
 
   li.ql-indent-4:not(.ql-direction-rtl) {
-    padding-left: 13.5em;
+    padding-#{$left}: 13.5em;
   }
 
   li.ql-indent-4.ql-direction-rtl.ql-align-right {
-    padding-right: 13.5em;
+    padding-#{$right}: 13.5em;
   }
 
   li.ql-indent-5:not(.ql-direction-rtl) {
-    padding-left: 16.5em;
+    padding-#{$left}: 16.5em;
   }
 
   li.ql-indent-5.ql-direction-rtl.ql-align-right {
-    padding-right: 16.5em;
+    padding-#{$right}: 16.5em;
   }
 
   li.ql-indent-6:not(.ql-direction-rtl) {
-    padding-left: 19.5em;
+    padding-#{$left}: 19.5em;
   }
 
   li.ql-indent-6.ql-direction-rtl.ql-align-right {
-    padding-right: 19.5em;
+    padding-#{$right}: 19.5em;
   }
 
   li.ql-indent-7:not(.ql-direction-rtl) {
-    padding-left: 22.5em;
+    padding-#{$left}: 22.5em;
   }
 
   li.ql-indent-7.ql-direction-rtl.ql-align-right {
-    padding-right: 22.5em;
+    padding-#{$right}: 22.5em;
   }
 
   li.ql-indent-8:not(.ql-direction-rtl) {
-    padding-left: 25.5em;
+    padding-#{$left}: 25.5em;
   }
 
   li.ql-indent-8.ql-direction-rtl.ql-align-right {
-    padding-right: 25.5em;
+    padding-#{$right}: 25.5em;
   }
 
   li.ql-indent-9:not(.ql-direction-rtl) {
-    padding-left: 28.5em;
+    padding-#{$left}: 28.5em;
   }
 
   li.ql-indent-9.ql-direction-rtl.ql-align-right {
-    padding-right: 28.5em;
+    padding-#{$right}: 28.5em;
   }
 }
 
@@ -562,7 +562,7 @@
   }
 
   dd {
-    margin-left: 2.5rem;
+    margin-#{$left}: 2.5rem;
   }
 
   abbr[title],
@@ -609,74 +609,74 @@
   }
 
   .ql-indent-1:not(.ql-direction-rtl) {
-    padding-left: 3em;
+    padding-#{$left}: 3em;
   }
 
   .ql-indent-1.ql-direction-rtl.ql-align-right {
-    padding-right: 3em;
+    padding-#{$right}: 3em;
   }
 
   .ql-indent-2:not(.ql-direction-rtl) {
-    padding-left: 6em;
+    padding-#{$left}: 6em;
   }
 
   .ql-indent-2.ql-direction-rtl.ql-align-right {
-    padding-right: 6em;
+    padding-#{$right}: 6em;
   }
 
   .ql-indent-3:not(.ql-direction-rtl) {
-    padding-left: 9em;
+    padding-#{$left}: 9em;
   }
 
   .ql-indent-3.ql-direction-rtl.ql-align-right {
-    padding-right: 9em;
+    padding-#{$right}: 9em;
   }
 
   .ql-indent-4:not(.ql-direction-rtl) {
-    padding-left: 12em;
+    padding-#{$left}: 12em;
   }
 
   .ql-indent-4.ql-direction-rtl.ql-align-right {
-    padding-right: 12em;
+    padding-#{$right}: 12em;
   }
 
   .ql-indent-5:not(.ql-direction-rtl) {
-    padding-left: 15em;
+    padding-#{$left}: 15em;
   }
 
   .ql-indent-5.ql-direction-rtl.ql-align-right {
-    padding-right: 15em;
+    padding-#{$right}: 15em;
   }
 
   .ql-indent-6:not(.ql-direction-rtl) {
-    padding-left: 18em;
+    padding-#{$left}: 18em;
   }
 
   .ql-indent-6.ql-direction-rtl.ql-align-right {
-    padding-right: 18em;
+    padding-#{$right}: 18em;
   }
 
   .ql-indent-7:not(.ql-direction-rtl) {
-    padding-left: 21em;
+    padding-#{$left}: 21em;
   }
 
   .ql-indent-7.ql-direction-rtl.ql-align-right {
-    padding-right: 21em;
+    padding-#{$right}: 21em;
   }
 
   .ql-indent-8:not(.ql-direction-rtl) {
-    padding-left: 24em;
+    padding-#{$left}: 24em;
   }
 
   .ql-indent-8.ql-direction-rtl.ql-align-right {
-    padding-right: 24em;
+    padding-#{$right}: 24em;
   }
 
   .ql-indent-9:not(.ql-direction-rtl) {
-    padding-left: 27em;
+    padding-#{$left}: 27em;
   }
 
   .ql-indent-9.ql-direction-rtl.ql-align-right {
-    padding-right: 27em;
+    padding-#{$right}: 27em;
   }
 }

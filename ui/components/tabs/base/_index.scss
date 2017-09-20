@@ -55,8 +55,8 @@
     display: block;
     content: '';
     bottom: 0;
-    left: 0;
-    right: 0;
+    #{$left}: 0;
+    #{$right}: 0;
     position: absolute;
     height: $border-width-thick;
   }
@@ -141,7 +141,7 @@
       width: rem(6px);
       position: relative;
       top: auto;
-      left: auto;
+      #{$left}: auto;
     }
   }
 
@@ -153,7 +153,7 @@
   &.slds-is-unsaved {
 
     .slds-indicator_unread {
-      margin-left: -0.35rem; // random but matches spec
+      margin-#{$left}: -0.35rem; // random but matches spec
     }
   }
 

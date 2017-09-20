@@ -21,18 +21,18 @@
     height: 100%;
     width: $border-width-thick;
     position: absolute;
-    left: $square-icon-medium-boundary-alt;
+    #{$left}: $square-icon-medium-boundary-alt;
     top: 0;
     bottom: 0;
-    margin-left: $border-width-thin;
+    margin-#{$left}: $border-width-thin;
   }
 
   .slds-media__figure {
-    margin-right: $spacing-xx-small;
+    margin-#{$right}: $spacing-xx-small;
     z-index: 1;
 
     .slds-button_icon {
-      margin-right: $spacing-x-small;
+      margin-#{$right}: $spacing-x-small;
     }
   }
 
@@ -41,17 +41,17 @@
   }
 
   .slds-checkbox {
-    margin-right: $spacing-xx-small;
+    margin-#{$right}: $spacing-xx-small;
   }
 
   .slds-timeline__actions_inline {
     flex-flow: row nowrap;
     align-items: center;
     flex-shrink: 0;
-    margin-left: $spacing-x-small;
+    margin-#{$left}: $spacing-x-small;
 
     .slds-timeline__date {
-      padding-right: $spacing-x-small;
+      padding-#{$right}: $spacing-x-small;
       margin-bottom: 0;
     }
   }
@@ -175,5 +175,5 @@
  * @restrict .slds-timeline__item_expandable svg
  */
 .slds-timeline__details-action-icon {
-  transform: rotate(-90deg);
+  transform: rotate(if-ltr(-90deg, 90deg));
 }

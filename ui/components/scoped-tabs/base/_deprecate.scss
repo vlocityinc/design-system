@@ -11,12 +11,12 @@
       margin-bottom: ($border-width-thin * -1);
 
       + .slds-tabs__item {
-        margin-left: ($border-width-thin * -1);
+        margin-#{$left}: ($border-width-thin * -1);
       }
 
       &:first-child > a {
-        border-left: 0;
-        border-radius: $border-radius-medium 0 0 0;
+        border-#{$left}: 0;
+        border-radius: corner-values($border-radius-medium 0 0 0);
       }
 
       > a {
@@ -26,8 +26,8 @@
         padding: 0 $spacing-large;
         color: $color-text-weak;
         background-clip: padding-box;
-        border-left: $border-width-thin solid transparent;
-        border-right: $border-width-thin solid transparent;
+        border-#{$left}: $border-width-thin solid transparent;
+        border-#{$right}: $border-width-thin solid transparent;
 
         &:hover,
         &:focus {
@@ -52,7 +52,7 @@
       background-color: $color-background-alt;
       border: $border-width-thin solid $color-border-button-default;
       border-top: 0;
-      border-radius: 0 0 $border-radius-medium $border-radius-medium;
+      border-radius: corner-values(0 0 $border-radius-medium $border-radius-medium);
       padding: $spacing-medium;
     }
   }

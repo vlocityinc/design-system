@@ -109,12 +109,12 @@
  * @modifier
  */
 .slds-gutters {
-  margin-right: ($spacing-small * -1);
-  margin-left: ($spacing-small * -1);
+  margin-#{$right}: ($spacing-small * -1);
+  margin-#{$left}: ($spacing-small * -1);
 
   .slds-col {
-    padding-right: $spacing-small;
-    padding-left: $spacing-small;
+    padding-#{$right}: $spacing-small;
+    padding-#{$left}: $spacing-small;
   }
 }
 
@@ -124,12 +124,12 @@
  * @modifier
  */
 .slds-gutters_xxx-small {
-  margin-right: ($spacing-xxx-small * -1);
-  margin-left: ($spacing-xxx-small * -1);
+  margin-#{$right}: ($spacing-xxx-small * -1);
+  margin-#{$left}: ($spacing-xxx-small * -1);
 
   .slds-col {
-    padding-right: $spacing-xxx-small;
-    padding-left: $spacing-xxx-small;
+    padding-#{$right}: $spacing-xxx-small;
+    padding-#{$left}: $spacing-xxx-small;
   }
 }
 
@@ -139,12 +139,12 @@
  * @modifier
  */
 .slds-gutters_xx-small {
-  margin-right: ($spacing-xx-small * -1);
-  margin-left: ($spacing-xx-small * -1);
+  margin-#{$right}: ($spacing-xx-small * -1);
+  margin-#{$left}: ($spacing-xx-small * -1);
 
   .slds-col {
-    padding-right: $spacing-xx-small;
-    padding-left: $spacing-xx-small;
+    padding-#{$right}: $spacing-xx-small;
+    padding-#{$left}: $spacing-xx-small;
   }
 }
 
@@ -154,12 +154,12 @@
  * @modifier
  */
 .slds-gutters_x-small {
-  margin-right: ($spacing-x-small * -1);
-  margin-left: ($spacing-x-small * -1);
+  margin-#{$right}: ($spacing-x-small * -1);
+  margin-#{$left}: ($spacing-x-small * -1);
 
   .slds-col {
-    padding-right: $spacing-x-small;
-    padding-left: $spacing-x-small;
+    padding-#{$right}: $spacing-x-small;
+    padding-#{$left}: $spacing-x-small;
   }
 }
 
@@ -169,12 +169,12 @@
  * @modifier
  */
 .slds-gutters_small {
-  margin-right: ($spacing-small * -1);
-  margin-left: ($spacing-small * -1);
+  margin-#{$right}: ($spacing-small * -1);
+  margin-#{$left}: ($spacing-small * -1);
 
   .slds-col {
-    padding-right: $spacing-small;
-    padding-left: $spacing-small;
+    padding-#{$right}: $spacing-small;
+    padding-#{$left}: $spacing-small;
   }
 }
 
@@ -184,12 +184,12 @@
  * @modifier
  */
 .slds-gutters_medium {
-  margin-right: ($spacing-medium * -1);
-  margin-left: ($spacing-medium * -1);
+  margin-#{$right}: ($spacing-medium * -1);
+  margin-#{$left}: ($spacing-medium * -1);
 
   .slds-col {
-    padding-right: $spacing-medium;
-    padding-left: $spacing-medium;
+    padding-#{$right}: $spacing-medium;
+    padding-#{$left}: $spacing-medium;
   }
 }
 
@@ -199,12 +199,12 @@
  * @modifier
  */
 .slds-gutters_large {
-  margin-right: ($spacing-large * -1);
-  margin-left: ($spacing-large * -1);
+  margin-#{$right}: ($spacing-large * -1);
+  margin-#{$left}: ($spacing-large * -1);
 
   .slds-col {
-    padding-right: $spacing-large;
-    padding-left: $spacing-large;
+    padding-#{$right}: $spacing-large;
+    padding-#{$left}: $spacing-large;
   }
 }
 
@@ -214,12 +214,12 @@
  * @modifier
  */
 .slds-gutters_xx-large {
-  margin-right: ($spacing-xx-large * -1);
-  margin-left: ($spacing-xx-large * -1);
+  margin-#{$right}: ($spacing-xx-large * -1);
+  margin-#{$left}: ($spacing-xx-large * -1);
 
   .slds-col {
-    padding-right: $spacing-xx-large;
-    padding-left: $spacing-xx-large;
+    padding-#{$right}: $spacing-xx-large;
+    padding-#{$left}: $spacing-xx-large;
   }
 }
 
@@ -229,12 +229,12 @@
  * @modifier
  */
 .slds-gutters_x-large {
-  margin-right: ($spacing-x-large * -1);
-  margin-left: ($spacing-x-large * -1);
+  margin-#{$right}: ($spacing-x-large * -1);
+  margin-#{$left}: ($spacing-x-large * -1);
 
   .slds-col {
-    padding-right: $spacing-x-large;
-    padding-left: $spacing-x-large;
+    padding-#{$right}: $spacing-x-large;
+    padding-#{$left}: $spacing-x-large;
   }
 }
 
@@ -246,8 +246,8 @@
  */
 .slds-grid_pull-padded,
 .slds-grid--pull-padded {
-  margin-right: ($spacing-small * -1);
-  margin-left: ($spacing-small * -1);
+  margin-#{$right}: ($spacing-small * -1);
+  margin-#{$left}: ($spacing-small * -1);
 }
 
 /**
@@ -258,8 +258,8 @@
  */
 .slds-grid_pull-padded-xxx-small,
 .slds-grid--pull-padded-xxx-small {
-  margin-right: ($spacing-xxx-small * -1);
-  margin-left: ($spacing-xxx-small * -1);
+  margin-#{$right}: ($spacing-xxx-small * -1);
+  margin-#{$left}: ($spacing-xxx-small * -1);
 }
 
 /**
@@ -270,8 +270,8 @@
  */
 .slds-grid_pull-padded-xx-small,
 .slds-grid--pull-padded-xx-small {
-  margin-right: ($spacing-xx-small * -1);
-  margin-left: ($spacing-xx-small * -1);
+  margin-#{$right}: ($spacing-xx-small * -1);
+  margin-#{$left}: ($spacing-xx-small * -1);
 }
 
 /**
@@ -282,8 +282,8 @@
  */
 .slds-grid_pull-padded-x-small,
 .slds-grid--pull-padded-x-small {
-  margin-right: ($spacing-x-small * -1);
-  margin-left: ($spacing-x-small * -1);
+  margin-#{$right}: ($spacing-x-small * -1);
+  margin-#{$left}: ($spacing-x-small * -1);
 }
 
 /**
@@ -294,8 +294,8 @@
  */
 .slds-grid_pull-padded-small,
 .slds-grid--pull-padded-small {
-  margin-right: ($spacing-small * -1);
-  margin-left: ($spacing-small * -1);
+  margin-#{$right}: ($spacing-small * -1);
+  margin-#{$left}: ($spacing-small * -1);
 }
 
 /**
@@ -306,8 +306,8 @@
  */
 .slds-grid_pull-padded-medium,
 .slds-grid--pull-padded-medium {
-  margin-right: ($spacing-medium * -1);
-  margin-left: ($spacing-medium * -1);
+  margin-#{$right}: ($spacing-medium * -1);
+  margin-#{$left}: ($spacing-medium * -1);
 }
 
 /**
@@ -318,8 +318,8 @@
  */
 .slds-grid_pull-padded-large,
 .slds-grid--pull-padded-large {
-  margin-right: ($spacing-large * -1);
-  margin-left: ($spacing-large * -1);
+  margin-#{$right}: ($spacing-large * -1);
+  margin-#{$left}: ($spacing-large * -1);
 }
 
 /**
@@ -330,8 +330,8 @@
  */
 .slds-grid_pull-padded-x-large,
 .slds-grid--pull-padded-x-large {
-  margin-right: ($spacing-x-large * -1);
-  margin-left: ($spacing-x-large * -1);
+  margin-#{$right}: ($spacing-x-large * -1);
+  margin-#{$left}: ($spacing-x-large * -1);
 }
 
 /**
@@ -342,8 +342,8 @@
  */
 .slds-grid_pull-padded-xx-large,
 .slds-grid--pull-padded-xx-large {
-  margin-right: ($spacing-xx-large * -1);
-  margin-left: ($spacing-xx-large * -1);
+  margin-#{$right}: ($spacing-xx-large * -1);
+  margin-#{$left}: ($spacing-xx-large * -1);
 }
 
 /**
@@ -382,7 +382,7 @@
 .slds-col_rule-right,
 .slds-col--rule-right {
   @include mq-large-min {
-    border-right: 1px solid $color-border-separator;
+    border-#{$right}: 1px solid $color-border-separator;
   }
 }
 
@@ -410,7 +410,7 @@
 .slds-col_rule-left,
 .slds-col--rule-left {
   @include mq-large-min {
-    border-left: 1px solid $color-border-separator;
+    border-#{$left}: 1px solid $color-border-separator;
   }
 }
 
@@ -487,7 +487,7 @@
 
 // Resets spacing/bullets for when grids are used on unordered lists
 .slds-text-longform ul.slds-grid {
-  margin-left: 0;
+  margin-#{$left}: 0;
   list-style: none;
 }
 
@@ -648,7 +648,7 @@
  */
 .slds-col_bump-right,
 .slds-col--bump-right {
-  margin-right: auto;
+  margin-#{$right}: auto;
 }
 
 /**
@@ -659,7 +659,7 @@
  */
 .slds-col_bump-bottom,
 .slds-col--bump-bottom {
-  margin-right: auto;
+  margin-#{$right}: auto;
 }
 
 /**
@@ -670,7 +670,7 @@
  */
 .slds-col_bump-left,
 .slds-col--bump-left {
-  margin-left: auto;
+  margin-#{$left}: auto;
 }
 
 
@@ -751,8 +751,8 @@
 .slds-container_center,
 .slds-container--center {
   margin: {
-    left: auto;
-    right: auto;
+    #{$left}: auto;
+    #{$right}: auto;
   }
 }
 
@@ -764,7 +764,7 @@
  */
 .slds-container_left,
 .slds-container--left {
-  margin-right: auto;
+  margin-#{$right}: auto;
 }
 
 /**
@@ -775,7 +775,7 @@
  */
 .slds-container_right,
 .slds-container--right {
-  margin-left: auto;
+  margin-#{$left}: auto;
 }
 
 .slds-grid_overflow,

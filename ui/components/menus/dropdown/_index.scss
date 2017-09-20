@@ -83,12 +83,12 @@
 
     ~ .slds-dropdown_left[class*="slds-nubbin"],
     ~ .slds-dropdown--left[class*="slds-nubbin"] {
-      left: ($spacing-x-small * -1);
+      #{$left}: ($spacing-x-small * -1);
     }
 
     ~ .slds-dropdown_right[class*="slds-nubbin"],
     ~ .slds-dropdown--right[class*="slds-nubbin"] {
-      right: ($spacing-x-small * -1);
+      #{$right}: ($spacing-x-small * -1);
     }
   }
 }
@@ -102,8 +102,8 @@
 .slds-dropdown {
   position: absolute;
   z-index: $z-index-dropdown;
-  left: 50%;
-  float: left;
+  #{$left}: 50%;
+  float: $left;
   min-width: $size-xx-small;
   max-width: $size-medium;
   margin-top: $spacing-xxx-small;
@@ -114,7 +114,7 @@
   font-size: $font-size-small;
   background: $color-background-alt;
   box-shadow: $shadow-drop-down;
-  transform: translateX(-50%);
+  transform: translateX(if-ltr(-50%, 50%));
 
   /**
    * @summary Positions dropdown to left side of target
@@ -125,7 +125,7 @@
    */
   &_left,
   &--left {
-    left: 0;
+    #{$left}: 0;
     transform: translateX(0);
   }
 
@@ -138,8 +138,8 @@
    */
   &_right,
   &--right {
-    left: auto;
-    right: 0;
+    #{$left}: auto;
+    #{$right}: 0;
     transform: translateX(0);
   }
 

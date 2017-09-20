@@ -9,7 +9,7 @@
       position: relative;
 
       + .slds-form-element__control {
-        padding-left: $spacing-x-small;
+        padding-#{$left}: $spacing-x-small;
       }
     }
   }

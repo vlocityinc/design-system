@@ -17,8 +17,8 @@
  * @restrict .slds-global-actions li
  */
 .slds-global-actions__item {
-  margin-left: $spacing-xx-small;
-  margin-right: $spacing-xx-small;
+  margin-#{$left}: $spacing-xx-small;
+  margin-#{$right}: $spacing-xx-small;
 
   .slds-button_icon {
     color: $brand-header-contrast-weak;
@@ -67,7 +67,7 @@
   box-shadow: $brand-header-contrast-weak-active 0 0 0 0;
   border-radius: $border-radius-circle;
   border: 0;
-  margin-left: $spacing-x-small;
+  margin-#{$left}: $spacing-x-small;
   transition: transform 80ms ease-out, box-shadow 0.1s linear;
 
   &:hover,
@@ -83,7 +83,7 @@
  */
 .slds-global-actions__favorites {
   display: inline-flex;
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 }
 
 /**
@@ -137,8 +137,8 @@
  */
 .slds-global-actions__favorites-more {
   width: auto;
-  padding-left: $spacing-xxx-small;
-  padding-right: $spacing-xxx-small;
+  padding-#{$left}: $spacing-xxx-small;
+  padding-#{$right}: $spacing-xxx-small;
   border-color: $brand-header-contrast-weak;
 
   &:hover {
@@ -218,7 +218,7 @@
   align-items: center;
   position: absolute;
   top: rem(4px * -1);
-  right: rem(4px * -1);
+  #{$right}: rem(4px * -1);
   background: $brand-header-contrast-warm;
   color: #fff;
   border-radius: $border-radius-pill;

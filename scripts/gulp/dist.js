@@ -38,7 +38,7 @@ export const copyRoot = () =>
 
 export const copySass = () =>
   gulp
-    .src('**/*.scss', {
+    .src(['**/*.scss', '**/*.rtl.scss'], {
       base: paths.ui,
       cwd: paths.ui
     })
@@ -70,7 +70,7 @@ export const copyIconsMeta = () =>
 
 export const copyFonts = () =>
   gulp
-    .src('fonts/**/*', {
+    .src(['fonts/**/*', '!**/*.ttf'], {
       cwd: paths.assets
     })
     .pipe(gulp.dest(distPath('assets/fonts')));
@@ -84,7 +84,7 @@ export const copyFontsLicense = () =>
 
 export const copyImages = () =>
   gulp
-    .src('images/**/*', {
+    .src(['images/**/*', '!images/themes/**/*'], {
       base: 'assets/images',
       cwd: paths.assets
     })
@@ -122,7 +122,13 @@ export const copyComponentDesignTokens = () =>
 
 export const sass = () =>
   gulp
-    .src(distPath('scss/index.scss'))
+    .src([
+      distPath('scss/index-ltng.scss'),
+      distPath('scss/index-ltng.rtl.scss'),
+      distPath('scss/index-vf.scss'),
+      distPath('scss/index-vf.rtl.scss'),
+      distPath('scss/slds-fonts.scss')
+    ])
     .pipe(
       gulpSass({
         precision: 10,
@@ -133,7 +139,9 @@ export const sass = () =>
     .pipe(gulpPostcss([autoprefixer({ remove: false })]))
     .pipe(
       gulpRename(path => {
-        path.basename = MODULE_NAME + path.basename.substring('index'.length);
+        if (!/slds-fonts/.test(path.basename)) {
+          path.basename = MODULE_NAME + path.basename.substring('index'.length);
+        }
         path.extname = '.css';
         return path;
       })
@@ -142,12 +150,16 @@ export const sass = () =>
 
 export const minifyCss = () =>
   gulp
-    .src(distPath('assets/styles/*.css'), { base: distPath() })
+    .src(
+      [distPath('assets/styles/*.css'), distPath('assets/styles/*.rtl.css')],
+      { base: distPath() }
+    )
     .pipe(gulp.dest(distPath()))
     .pipe(
       gulpMinifyCss({
         advanced: false,
-        roundingPrecision: '-1'
+        roundingPrecision: '-1',
+        processImport: false
       })
     )
     .pipe(
@@ -160,7 +172,7 @@ export const minifyCss = () =>
 
 export const versionBlock = () =>
   gulp
-    .src(['**/*.css', 'scss/index*'], {
+    .src(['**/*.css', '**/*.rtl.css', 'scss/index*'], {
       base: distPath(),
       cwd: distPath()
     })
@@ -203,7 +215,14 @@ export const packageJson = () => {
     .delete('devDependencies')
     .delete('optionalDependencies')
     .delete('engines')
-    .delete('important');
+    .delete('important')
+    .delete('swatches');
+  // .delete(distPath('design-tokens'))
+  // .delete(distPath('ui'))
+  // .delete(distPath('scss'))
+  // .delete(distPath('__internal'))
+  // .delete(distPath('assets/icons/**/*.png'));
+
   return gulpFile('package.json', JSON.stringify(b, null, 2), {
     src: true
   }).pipe(gulp.dest(distPath()));

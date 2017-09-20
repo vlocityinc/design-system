@@ -46,24 +46,24 @@
 
       &.slds-dropdown_left,
       &.slds-dropdown--left {
-        left: ($spacing-medium * -1);
+        #{$left}: ($spacing-medium * -1);
 
         &:before,
         &:after {
-          left: $spacing-large;
-          margin-left: 0;
+          #{$left}: $spacing-large;
+          margin-#{$left}: 0;
         }
       }
 
       &.slds-dropdown_right,
       &.slds-dropdown--right {
-        right: ($spacing-medium * -1);
+        #{$right}: ($spacing-medium * -1);
 
         &:before,
         &:after {
-          left: auto;
-          right: $spacing-large;
-          margin-left: 0;
+          #{$left}: auto;
+          #{$right}: $spacing-large;
+          margin-#{$left}: 0;
         }
       }
     }
@@ -81,14 +81,14 @@
       &--left > a,
       &_left > span,
       &--left > span {
-        padding-left: $spacing-x-large;
+        padding-#{$left}: $spacing-x-large;
       }
 
       &_right > a,
       &--right > a,
       &_right > span,
       &--right > span {
-        padding-right: $spacing-x-large;
+        padding-#{$right}: $spacing-x-large;
       }
 
       &_left-right > a,
@@ -96,8 +96,8 @@
       &_left-right > span,
       &--left-right > span {
         padding: {
-          left: $spacing-x-large;
-          right: $spacing-x-large;
+          #{$left}: $spacing-x-large;
+          #{$right}: $spacing-x-large;
         }
       }
 
@@ -110,12 +110,12 @@
 
         &_left,
         &--left {
-          left: $spacing-small;
+          #{$left}: $spacing-small;
         }
 
         &_right,
         &--right {
-          right: $spacing-small;
+          #{$right}: $spacing-small;
         }
       }
     }

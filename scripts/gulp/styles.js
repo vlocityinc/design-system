@@ -16,7 +16,7 @@ const sign = x => (x < 0 ? '' : '+');
 const toKB = n => (n / 1024).toFixed(2);
 
 export const stylestats = done => {
-  const localFile = 'assets/styles/slds.css';
+  const localFile = 'assets/styles/slds.rtl.css';
   const remoteFile =
     'https://www.lightningdesignsystem.com/assets/styles/salesforce-lightning-design-system.css';
 
@@ -64,7 +64,7 @@ export const stylestats = done => {
 
 export const sass = () =>
   gulp
-    .src('ui/index.scss')
+    .src(['ui/index.scss', 'ui/index.rtl.scss'])
     .pipe(gulpPlumber())
     .pipe(gulpSourcemaps.init())
     .pipe(
@@ -83,7 +83,7 @@ export const sass = () =>
 // Quick check that all variants compile correctly to CSS
 export const sassTest = () =>
   gulp
-    .src('ui/index-*.scss')
+    .src(['ui/index-*.scss', 'ui/index-*.rtl.scss'])
     .pipe(
       gulpSass
         .sync({

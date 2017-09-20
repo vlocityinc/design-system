@@ -69,7 +69,7 @@
  */
 .slds-panel__close {
   position: absolute;
-  right: $spacing-small;
+  #{$right}: $spacing-small;
   top: 50%;
   margin-top: (($square-icon-small-boundary / 2) * -1);
 }
@@ -133,8 +133,8 @@
    * @modifier
    */
   &.slds-is-directional .slds-panel__close {
-    left: $spacing-small;
-    right: auto;
+    #{$left}: $spacing-small;
+    #{$right}: auto;
   }
 }
 
@@ -145,11 +145,11 @@
  * @modifier
  */
 .slds-panel_docked-right {
-  margin-left: auto;
+  margin-#{$left}: auto;
   box-shadow: $panel-docked-right-shadow;
 
   &.slds-is-directional .slds-panel__close {
-    right: $spacing-small;
-    left: auto;
+    #{$right}: $spacing-small;
+    #{$left}: auto;
   }
 }

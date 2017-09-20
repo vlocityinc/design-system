@@ -15,7 +15,7 @@
 .slds-input {
   @include form-states;
   display: inline-block;
-  padding: 0 $spacing-medium 0 $spacing-small;
+  padding: side-values(0 $spacing-medium 0 $spacing-small);
   line-height: $height-input;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
 
@@ -24,7 +24,7 @@
    * @restrict .slds-input
    */
   &[readonly] {
-    padding-left: 0;
+    padding-#{$left}: 0;
     border-color: transparent;
     background-color: transparent;
     font-size: $input-static-font-size;
@@ -51,7 +51,7 @@
     padding: {
       top: 0;
       bottom: 0;
-      left: $spacing-small;
+      #{$left}: $spacing-small;
     }
     color: $color-text-default;
     line-height: $height-input;
@@ -105,7 +105,7 @@
  * @restrict .slds-input
  */
 .slds-input_borders {
-  padding-left: $spacing-small;
+  padding-#{$left}: $spacing-small;
   border-color: $color-border-input;
 }
 
@@ -153,13 +153,13 @@
   &--left {
 
     .slds-input__icon {
-      left: $spacing-small;
+      #{$left}: $spacing-small;
     }
 
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding-left: $spacing-x-large;
+      padding-#{$left}: $spacing-x-large;
     }
   }
 
@@ -173,13 +173,13 @@
   &--right {
 
     .slds-input__icon {
-      right: $spacing-small;
+      #{$right}: $spacing-small;
     }
 
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding-right: $spacing-x-large;
+      padding-#{$right}: $spacing-x-large;
     }
   }
 
@@ -199,7 +199,7 @@
      */
     .slds-input__icon_left,
     .slds-input__icon--left {
-      left: $spacing-small;
+      #{$left}: $spacing-small;
     }
 
     /**
@@ -210,7 +210,7 @@
      */
     .slds-input__icon_right,
     .slds-input__icon--right {
-      right: $spacing-small;
+      #{$right}: $spacing-small;
     }
 
     .slds-input,
@@ -225,7 +225,7 @@
     .slds-input,
     .slds-input_bare,
     .slds-input--bare {
-      padding-right: ($spacing-xx-large + $spacing-xx-small);
+      padding-#{$right}: ($spacing-xx-large + $spacing-xx-small);
     }
   }
 }
@@ -249,17 +249,17 @@
  * @restrict .slds-input__icon-group
  */
 .slds-input__icon-group_right {
-  right: 0;
+  #{$right}: 0;
   top: 50%;
 
   .slds-input__icon_right,
   .slds-input__icon--right {
-    right: $spacing-x-small;
+    #{$right}: $spacing-x-small;
   }
 
   .slds-input__spinner {
-    right: $spacing-large;
-    left: auto;
+    #{$right}: if-ltr($spacing-large, $spacing-xx-large);
+    #{$left}: auto;
   }
 }
 
@@ -299,7 +299,7 @@
 .slds-input__button_decrement {
   position: absolute;
   bottom: 0.25rem;
-  left: 0.75rem;
+  #{$left}: 0.75rem;
 }
 
 /**
@@ -311,5 +311,5 @@
 .slds-input__button_increment {
   position: absolute;
   bottom: 0.25rem;
-  right: 0.75rem;
+  #{$right}: 0.75rem;
 }

@@ -23,7 +23,7 @@
   min-height: $height-pill;
 
   + .slds-pill {
-    margin-left: $spacing-xxx-small;
+    margin-#{$left}: $spacing-xxx-small;
   }
 
   &:hover {
@@ -76,8 +76,8 @@
     background-color: $color-background-input;
 
     .slds-listbox_inline {
-      margin-left: 0;
-      margin-right: 0;
+      margin-#{$left}: 0;
+      margin-#{$right}: 0;
     }
   }
 
@@ -128,7 +128,7 @@
   &__icon,
   &__icon_container {
     @include square($square-icon-x-small-boundary);
-    margin-right: $spacing-xx-small;
+    margin-#{$right}: $spacing-xx-small;
 
     .slds-icon,
     .slds-avatar {
@@ -138,7 +138,7 @@
     }
 
     ~ .slds-pill__action {
-      padding-left: calc(#{$square-icon-x-small-boundary} + #{$spacing-xx-small} + 2px);
+      padding-#{$left}: calc(#{$square-icon-x-small-boundary} + #{$spacing-xx-small} + 2px);
     }
   }
 
@@ -153,7 +153,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: $spacing-xx-small;
+    margin-#{$left}: $spacing-xx-small;
     border-radius: $border-radius-small;
 
     svg {
@@ -177,14 +177,14 @@
     display: inline-block;
     position: absolute;
     top: 50%;
-    left: $spacing-xxx-small;
+    #{$left}: $spacing-xxx-small;
     transform: translateY(-50%);
   }
 
   .slds-pill__remove {
     position: absolute;
     top: 50%;
-    right: $spacing-xxx-small;
+    #{$right}: $spacing-xxx-small;
     transform: translateY(-50%);
   }
 }
@@ -197,7 +197,7 @@
  */
 .slds-pill__action {
   padding: $spacing-xxx-small;
-  padding-right: calc(#{$square-icon-xx-small-boundary} + #{$spacing-xx-small} + 2px);
+  padding-#{$right}: calc(#{$square-icon-xx-small-boundary} + #{$spacing-xx-small} + 2px);
   border: $border-width-thin solid $color-border;
   border-radius: $border-radius-medium;
   white-space: nowrap;

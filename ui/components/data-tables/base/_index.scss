@@ -99,7 +99,7 @@
    */
   .slds-cell-buffer_left,
   .slds-cell-buffer--left {
-    padding-left: $spacing-large;
+    padding-#{$left}: $spacing-large;
   }
 
   /**
@@ -111,7 +111,7 @@
    */
   .slds-cell-buffer_right,
   .slds-cell-buffer--right {
-    padding-right: $spacing-large;
+    padding-#{$right}: $spacing-large;
   }
 
   tbody {
@@ -153,7 +153,7 @@
   }
 
   .slds-radio [type='radio'] + .slds-radio__label .slds-radio_faux {
-    margin-right: 0;
+    margin-#{$right}: 0;
   }
 }
 
@@ -171,13 +171,13 @@
   // First cells in a row
   tr > th:first-child,
   tr > td:first-child {
-    padding-left: $spacing-large;
+    padding-#{$left}: $spacing-large;
   }
 
   // Last cells in a row
   tr > th:last-child,
   tr > td:last-child {
-    padding-right: $spacing-large;
+    padding-#{$right}: $spacing-large;
   }
 }
 
@@ -240,7 +240,7 @@
   th + th,
   th + td,
   td + th {
-    border-left: $border-width-thin solid $color-border;
+    border-#{$left}: $border-width-thin solid $color-border;
   }
 }
 
@@ -288,19 +288,19 @@
 
     &:nth-child(n) {
       padding: {
-        left: 0;
-        right: 0;
+        #{$left}: 0;
+        #{$right}: 0;
       }
     }
 
     &:first-child {
-      text-align: right;
-      padding-right: $spacing-x-small;
+      text-align: $right;
+      padding-#{$right}: $spacing-x-small;
     }
 
     &:last-child {
-      text-align: left;
-      padding-left: $spacing-x-small;
+      text-align: $left;
+      padding-#{$left}: $spacing-x-small;
     }
   }
 }
@@ -367,7 +367,7 @@
   &-button {
     position: absolute;
     top: 50%;
-    right: $spacing-xx-small;
+    #{$right}: $spacing-xx-small;
     transform: translateY(-50%);
   }
 }
@@ -380,7 +380,7 @@
  * @restrict .slds-table_fixed-layout th
  */
 .slds-has-button-menu .slds-th__action {
-  padding-right: $spacing-large;
+  padding-#{$right}: $spacing-large;
 }
 
 /**
@@ -391,7 +391,7 @@
  */
 .slds-is-sortable__icon {
   @include square($square-icon-small-content);
-  margin-left: $spacing-xx-small;
+  margin-#{$left}: $spacing-xx-small;
   display: none;
 }
 
@@ -443,7 +443,7 @@ $max-column-support: 15;
     position: absolute;
     top: 2.25rem;
     bottom: 0;
-    right: 0;
+    #{$right}: 0;
     width: 50%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 69%);
   }
@@ -496,7 +496,7 @@ $max-column-support: 15;
    */
   &__handle {
     position: absolute;
-    right: 0;
+    #{$right}: 0;
     top: 0;
     width: $spacing-xx-small;
     height: 100%;
@@ -521,7 +521,7 @@ $max-column-support: 15;
    */
   &__divider {
     position: absolute;
-    right: 0;
+    #{$right}: 0;
     height: 100vh;
     width: 1px;
     background: $color-background-button-brand;

@@ -74,11 +74,11 @@
   // Add spacing when button-group is adjacent to a button
   + .slds-button-group,
   + .slds-button-group-list {
-    margin-left: $spacing-xx-small;
+    margin-#{$left}: $spacing-xx-small;
   }
   // Add spacing when another button is adjacent to it
   + .slds-button {
-    margin-left: $spacing-xx-small;
+    margin-#{$left}: $spacing-xx-small;
   }
 }
 
@@ -341,7 +341,7 @@ a.slds-button--inverse:focus {
  */
 .slds-button__icon_left,
 .slds-button__icon--left {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 }
 
 /**
@@ -351,5 +351,5 @@ a.slds-button--inverse:focus {
  */
 .slds-button__icon_right,
 .slds-button__icon--right {
-  margin-left: $spacing-x-small;
+  margin-#{$left}: $spacing-x-small;
 }

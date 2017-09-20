@@ -19,7 +19,7 @@
   cursor: pointer;
 
   + .slds-visual-picker {
-    margin-left: $spacing-medium;
+    margin-#{$left}: $spacing-medium;
   }
 
   &:active .slds-visual-picker__figure {
@@ -93,7 +93,7 @@
         content: '';
         position: absolute;
         top: 0;
-        right: 0;
+        #{$right}: 0;
         border-color: transparent;
         border-style: solid;
         border-radius: 0.5rem;

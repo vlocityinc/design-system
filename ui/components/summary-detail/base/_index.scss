@@ -21,7 +21,7 @@
    * @restrict .slds-summary-detail div
    */
   .slds-summary-detail__action-icon {
-    transform: rotate(-90deg);
+    transform: rotate(if-ltr(-90deg, 90deg));
   }
 
   /**

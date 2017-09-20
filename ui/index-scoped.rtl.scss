@@ -9,6 +9,9 @@
 
 // Lightning Design System - Scoped
 
+// Override default value for $dir in directional.scss
+$dir: rtl;
+
 @import 'init';
 @import url('./slds-fonts.css');
 

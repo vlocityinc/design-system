@@ -9,8 +9,8 @@
     padding: 0 $spacing-small;
     height: inherit;
     white-space: nowrap;
-    border-bottom-left-radius: $border-radius-medium;
-    border-bottom-right-radius: $border-radius-medium;
+    border-bottom-#{$left}-radius: $border-radius-medium;
+    border-bottom-#{$right}-radius: $border-radius-medium;
 
     &:hover,
     &:focus {
@@ -21,7 +21,7 @@
     .slds-text-body_small,
     .slds-text-body--small {
       color: $color-text-inverse;
-      margin-left: $spacing-x-small;
+      margin-#{$left}: $spacing-x-small;
     }
   }
 }

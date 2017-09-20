@@ -53,8 +53,8 @@
         background: $brand-primary;
         position: absolute;
         top: 0;
-        left: -1px;
-        right: -1px;
+        #{$left}: -1px;
+        #{$right}: -1px;
       }
     }
   }

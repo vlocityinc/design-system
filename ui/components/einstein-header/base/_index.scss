@@ -25,7 +25,7 @@
   }
 
   &__actions {
-    padding-left: $spacing-medium;
+    padding-#{$left}: $spacing-medium;
     display: flex;
     align-items: center;
   }
@@ -33,7 +33,7 @@
   .slds-popover__close {
     position: absolute;
     top: 0;
-    right: 0;
+    #{$right}: 0;
   }
 }
 

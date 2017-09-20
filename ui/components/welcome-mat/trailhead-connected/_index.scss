@@ -27,7 +27,7 @@
   .slds-icon-action-check {
     border-width: 0;
     top: 50%;
-    right: 0%;
+    #{$right}: 0%;
     transform: translate3d(50%, -50%, 0);
     display: none;
   }

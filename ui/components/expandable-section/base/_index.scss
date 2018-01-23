@@ -42,7 +42,7 @@
     background: $color-background;
     cursor: pointer;
     width: 100%;
-    text-align: left;
+    text-align: $left;
     color: currentColor;
     font-size: inherit;
     padding: 0 $spacing-x-small;
@@ -69,7 +69,7 @@
   }
 
   &__title-action-icon {
-    transform: rotate(-90deg);
+    transform: rotate(if-ltr(-90deg, 90deg));
   }
 
   /**
@@ -127,7 +127,7 @@
 
     .slds-section-group_is-closed .slds-icon,
     .slds-section-group--is-closed .slds-icon {
-      transform: rotate(-90deg);
+      transform: rotate(if-ltr(-90deg, 90deg));
     }
   }
 }

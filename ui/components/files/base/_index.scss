@@ -164,7 +164,7 @@
    */
 
   &-has-actions {
-    padding-right: $spacing-xx-large;
+    padding-#{$right}: $spacing-xx-large;
   }
 
   /**
@@ -180,8 +180,8 @@
     color: $color-text-inverse;
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    #{$left}: 0;
+    #{$right}: 0;
     bottom: 0;
     z-index: 1;
   }
@@ -221,7 +221,7 @@
   &__actions-menu {
     position: absolute;
     bottom: $spacing-x-small;
-    right: $spacing-xx-small;
+    #{$right}: $spacing-xx-small;
   }
 
   /**
@@ -235,7 +235,7 @@
   &__external-icon {
     position: absolute;
     top: ($spacing-x-large + $spacing-x-small);
-    left: $spacing-large;
+    #{$left}: $spacing-large;
   }
 
   /**

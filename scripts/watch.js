@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 exports.watchPaths = {
-  css: ['assets/**/*.css'],
+  css: ['assets/**/*.css', 'assets/**/*.rtl.css'],
   sass: ['ui/**/*.scss', 'design-tokens/*.yml'],
   js: ['app_modules/**/*.{js,jsx}', 'ui/**/*.{js,jsx}', 'site/**/*.{js,jsx}'],
   tokens: [

@@ -186,7 +186,7 @@
  */
 .slds-text-align_left,
 .slds-text-align--left {
-  text-align: left;
+  text-align: $left;
 }
 
 /**
@@ -208,7 +208,7 @@
  */
 .slds-text-align_right,
 .slds-text-align--right {
-  text-align: right;
+  text-align: $right;
 }
 
 
@@ -267,7 +267,7 @@
 
     &.slds-video_right,
     &.slds-video--right {
-      margin: 0 0 0 auto;
+      margin: side-values(0 0 0 auto);
     }
   }
 }

@@ -103,7 +103,7 @@
  * @restrict .slds-chat-message__text .slds-icon_container, .slds-chat-event__body .slds-icon_container, .slds-chat-bookend .slds-icon_container
  */
 .slds-chat-icon {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 
   .slds-icon {
     fill: $color-text-weak;
@@ -131,7 +131,7 @@
  * @modifier
  */
 .slds-chat-message_faux-avatar {
-  padding-left: ($spacing-x-large + $spacing-x-small);
+  padding-#{$left}: ($spacing-x-large + $spacing-x-small);
 }
 
 /**
@@ -141,7 +141,7 @@
  * @restrict .slds-chat-message .slds-avatar
  */
 .slds-chat-avatar {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
   min-width: 2rem;
 }
 
@@ -208,7 +208,7 @@
  */
 .slds-chat-message__text_inbound {
   background-color: $chat-message-color-background-inbound;
-  border-radius: $border-radius-large $border-radius-large $border-radius-large 0;
+  border-radius: corner-values($border-radius-large $border-radius-large $border-radius-large 0);
   color: $color-text-default;
 }
 
@@ -254,7 +254,7 @@
   font-style: italic;
 
   .slds-icon-typing {
-    margin-right: $spacing-x-small;
+    margin-#{$right}: $spacing-x-small;
   }
 }
 
@@ -267,7 +267,7 @@
 .slds-chat-message__meta {
   color: $color-text-weak;
   font-size: $font-size-text-x-small;
-  margin: $spacing-xxx-small 0 0 $spacing-x-small;
+  margin: side-values($spacing-xxx-small 0 0 $spacing-x-small);
 }
 
 

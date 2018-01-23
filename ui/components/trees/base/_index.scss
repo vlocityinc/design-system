@@ -85,7 +85,7 @@
   &__item {
     display: flex;
     line-height: $line-height-button;
-    padding-left: $spacing-medium;
+    padding-#{$left}: $spacing-medium;
 
     /**
      * When a branch doesn't have children, apply slds-is-disabled to the button icon
@@ -219,7 +219,7 @@
   @for $current-level from 1 through $max-nesting-depth {
 
     [aria-level="#{$current-level}"] > .slds-tree__item {
-      padding-left: ($spacing-medium * $current-level);
+      padding-#{$left}: ($spacing-medium * $current-level);
     }
   }
 
@@ -228,7 +228,7 @@
     [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
     [aria-expanded="false"] > .slds-tree__item > .slds-button[aria-controls] > span > .slds-button__icon {
       transition: $duration-promptly transform ease-in-out;
-      transform: rotate(0deg);
+      transform: rotate(if-ltr(0deg, 180deg));
     }
 
     [aria-expanded="true"] > .slds-tree__item > .slds-button[aria-controls] > .slds-button__icon,
@@ -241,7 +241,7 @@
   // scss-lint:disable SelectorDepth
   [aria-expanded="false"] > .slds-tree__item .slds-button__icon {
     transition: $duration-promptly transform ease-in-out;
-    transform: rotate(0deg);
+    transform: rotate(if-ltr(0deg, 180deg));
   }
 
   [aria-expanded="true"] > .slds-tree__item .slds-button__icon {
@@ -256,6 +256,6 @@
   }
 
   .slds-pill {
-    margin-left: $spacing-small;
+    margin-#{$left}: $spacing-small;
   }
 }

@@ -60,7 +60,7 @@
  */
 .slds-nav-vertical__title {
   padding: $spacing-x-small $spacing-medium;
-  padding-left: $spacing-large;
+  padding-#{$left}: $spacing-large;
 
   &:not(:first-of-type) {
     margin-top: $spacing-x-small;
@@ -83,7 +83,7 @@
   &.slds-is-active:before {
     content: '';
     width: 4px;
-    left: 0;
+    #{$left}: 0;
     top: 0;
     bottom: 0;
     position: absolute;
@@ -172,10 +172,10 @@
       .slds-navigation-list--vertical__action {
         background-color: $brand-primary-transparent;
         border-color: $color-border;
-        border-left-color: $brand-primary;
+        border-#{$left}-color: $brand-primary;
 
         &:focus {
-          border-left-width: $spacing-x-small;
+          border-#{$left}-width: $spacing-x-small;
           color: $brand-accessible-active;
         }
       }
@@ -211,7 +211,7 @@
   .slds-navigation-list--vertical__action {
     display: block;
     border: {
-      left: $spacing-xx-small solid transparent;
+      #{$left}: $spacing-xx-small solid transparent;
       top: $border-width-thin solid transparent;
       bottom: $border-width-thin solid transparent;
     }

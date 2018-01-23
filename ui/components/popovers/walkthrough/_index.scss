@@ -43,7 +43,7 @@
 
   .slds-popover__close {
     margin-top: $spacing-x-small;
-    margin-right: $spacing-x-small;
+    margin-#{$right}: $spacing-x-small;
   }
 
   .slds-text-title {

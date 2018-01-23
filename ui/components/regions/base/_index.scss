@@ -32,5 +32,5 @@
  */
 .slds-region__pinned-left {
   background-color: $color-foreground-primary;
-  border-right: $border-width-thin solid $card-color-border;
+  border-#{$right}: $border-width-thin solid $card-color-border;
 }

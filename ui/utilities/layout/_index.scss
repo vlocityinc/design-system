@@ -29,8 +29,8 @@
  */
 .slds-has-bottom-magnet { // stylelint-disable declaration-no-important
   margin-bottom: 0 !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+  border-bottom-#{$left}-radius: 0 !important;
+  border-bottom-#{$right}-radius: 0 !important;
 }
 
 /**
@@ -41,8 +41,8 @@
  */
 .slds-has-top-magnet {
   margin-top: 0 !important;
-  border-top-left-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+  border-top-#{$left}-radius: 0 !important;
+  border-top-#{$right}-radius: 0 !important;
 
   &.slds-has-buffer {
     margin-bottom: 0;

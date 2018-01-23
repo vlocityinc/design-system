@@ -16,7 +16,7 @@ const paths = require('./paths');
 
 const { publish } = buildServerApi(process.env.BUILD_SERVER_HOST_NEW);
 
-const CSS_PATH = 'assets/styles/salesforce-lightning-design-system.css';
+const CSS_PATH = 'assets/styles/salesforce-lightning-design-system.rtl.css';
 
 const buildPaths = {
   build: path.resolve.bind(path, paths.build),

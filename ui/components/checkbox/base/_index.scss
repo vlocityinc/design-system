@@ -122,7 +122,7 @@
       display: block;
       position: absolute;
       top: 50%;
-      left: 50%;
+      #{$left}: 50%;
       width: $square-icon-x-small-content;
       height: 2px;
       background: $brand-accessible;
@@ -182,5 +182,5 @@
 .slds-form-element .slds-checkbox [type="checkbox"] ~ .slds-checkbox--faux,
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox_faux,
 .slds-form-element .slds-checkbox [type="checkbox"] + .slds-checkbox__label .slds-checkbox--faux {
-  margin-right: $spacing-x-small;
+  margin-#{$right}: $spacing-x-small;
 }

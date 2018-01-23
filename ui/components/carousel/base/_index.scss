@@ -68,8 +68,8 @@
  * @restrict .slds-carousel__panel-action div
  */
 .slds-carousel__image {
-  border-top-left-radius: $border-radius-medium;
-  border-top-right-radius: $border-radius-medium;
+  border-top-#{$left}-radius: $border-radius-medium;
+  border-top-#{$right}-radius: $border-radius-medium;
   overflow: hidden;
 
   > img {
@@ -85,8 +85,8 @@
 .slds-carousel__content {
   background: $carousel-color-background;
   padding: $spacing-small;
-  border-bottom-left-radius: $border-radius-medium;
-  border-bottom-right-radius: $border-radius-medium;
+  border-bottom-#{$left}-radius: $border-radius-medium;
+  border-bottom-#{$right}-radius: $border-radius-medium;
   text-align: center;
   height: 6.625rem;
   overflow-x: hidden;
@@ -165,6 +165,6 @@
  */
 .slds-carousel__autoplay {
   position: absolute;
-  left: 0;
+  #{$left}: 0;
   bottom: $spacing-xx-small;
 }

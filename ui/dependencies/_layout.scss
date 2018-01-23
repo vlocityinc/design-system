@@ -231,8 +231,18 @@
           // stylelint-disable max-nesting-depth,declaration-no-important
           .slds-#{$prop-prefix}-#{$position}_#{$spacing},
           .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
-            // stylelint-disable
-            #{$property}-#{$position}: 0 !important;
+            @if ($position == left) {
+              // stylelint-disable
+              #{$property}-#{$left}: 0 !important;
+            }
+            @else if ($position == right) {
+              // stylelint-disable
+              #{$property}-#{$right}: 0 !important;
+            }
+            @else {
+              // stylelint-disable
+              #{$property}-#{$position}: 0 !important;
+            }
           }
           // stylelint-enable max-nesting-depth,declaration-no-important
         }
@@ -240,7 +250,15 @@
         @else {
           .slds-#{$prop-prefix}-#{$position}_#{$spacing},
           .slds-#{$prop-prefix}-#{$position}--#{$spacing} {
-            #{$property}-#{$position}: $size;
+            @if ($position == left) {
+              #{$property}-#{$left}: $size;
+            }
+            @else if ($position == right) {
+              #{$property}-#{$right}: $size;
+            }
+            @else {
+              #{$property}-#{$position}: $size;
+            }
           }
         }
       }
@@ -254,8 +272,8 @@
       // Generate horizontal spacing utilities
       .slds-#{$prop-prefix}-horizontal_#{$spacing},
       .slds-#{$prop-prefix}-horizontal--#{$spacing} {
-        #{$property}-right: $size;
-        #{$property}-left: $size;
+        #{$property}-#{$right}: $size;
+        #{$property}-#{$left}: $size;
       }
       // Generate vertical + horizontal spacing utilities
       .slds-#{$prop-prefix}-around_#{$spacing},
@@ -350,7 +368,7 @@
 @mixin docked-bar {
   position: fixed;
   bottom: 0;
-  left: 0;
+  #{$left}: 0;
   width: 100%;
   background: $color-background;
   box-shadow: $shadow-docked;

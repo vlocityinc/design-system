@@ -81,7 +81,7 @@
  */
 .slds-accordion__summary-action-icon {
   flex-shrink: 0;
-  transform: rotate(-90deg);
+  transform: if-ltr(rotate(-90deg), rotate(90deg));
 }
 
 /**

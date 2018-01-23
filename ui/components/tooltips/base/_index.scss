@@ -72,12 +72,12 @@
 }
 
 .slds-slide-from-right-to-left {
-  transform: translateX(5%);
+  transform: translateX(if-ltr(5%, -5%));
   will-change: transform;
 }
 
 .slds-slide-from-left-to-right {
-  transform: translateX(-5%);
+  transform: translateX(if-ltr(-5%, 5%));
   will-change: transform;
 }
 

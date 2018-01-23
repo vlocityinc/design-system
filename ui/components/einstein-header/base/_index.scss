@@ -3,7 +3,7 @@
   background-color: $einstein-header-background-color;
   background-image: url($einstein-header-background);
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: $left top;
   background-size: cover;
   border-radius: calc(#{$border-radius-medium} - 1px) calc(#{$border-radius-medium} - 1px) 0 0;
   border-bottom: $border-width-thin solid $color-border;
@@ -20,12 +20,12 @@
     margin-bottom: calc((#{$spacing-small} + 5px) * -1);
     height: rem(76px);
     background-image: url($einstein-header-figure);
-    background-position: right bottom;
+    background-position: $right bottom;
     background-repeat: no-repeat;
   }
 
   &__actions {
-    padding-left: $spacing-medium;
+    padding-#{$left}: $spacing-medium;
     display: flex;
     align-items: center;
   }
@@ -33,7 +33,7 @@
   .slds-popover__close {
     position: absolute;
     top: 0;
-    right: 0;
+    #{$right}: 0;
   }
 }
 

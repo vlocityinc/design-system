@@ -27,7 +27,20 @@ const DISPLAY_NAME = 'Lightning Design System';
 const MODULE_NAME = 'salesforce-lightning-design-system';
 
 export const cleanBefore = () => del([paths.dist]);
-export const cleanAfter = () => del([distPath('README-dist.md')]);
+export const cleanAfter = () =>
+  del([
+    distPath('README-dist.md'),
+    distPath('design-tokens'),
+    distPath('ui'),
+    distPath('ui.json'),
+    distPath('ui.icons.json'),
+    distPath('manifest.json'),
+    distPath('swatches'),
+    distPath('RELEASENOTES.md'),
+    distPath('scss'),
+    distPath('__internal'),
+    distPath('assets/icons/**/*.png')
+  ]);
 
 export const copyRoot = () =>
   gulp
@@ -217,11 +230,6 @@ export const packageJson = () => {
     .delete('engines')
     .delete('important')
     .delete('swatches');
-  // .delete(distPath('design-tokens'))
-  // .delete(distPath('ui'))
-  // .delete(distPath('scss'))
-  // .delete(distPath('__internal'))
-  // .delete(distPath('assets/icons/**/*.png'));
 
   return gulpFile('package.json', JSON.stringify(b, null, 2), {
     src: true
